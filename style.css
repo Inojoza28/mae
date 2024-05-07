@@ -168,5 +168,76 @@ body{
 }
  /* Fim de Estilos para o h1 */
 
+/* Estilos para a figurinha da cartinha */
+.cartinha-icon {
+    position: fixed; /* Altere para posição fixa para que a cartinha permaneça no lugar enquanto a página é rolada */
+    bottom: 20px; /* Distância do fundo da página */
+    right: 20px; /* Distância da direita da página */
+    width: 50px;
+    height: 50px;
+    font-size: 25px; /* Ajuste o tamanho do ícone de acordo com suas preferências */
+    line-height: 50px; /* Centralize o ícone verticalmente */
+    text-align: center; /* Centralize o ícone horizontalmente */
+    cursor: pointer;
+    background-color: #fff; /* Cor de fundo branca */
+    border-radius: 50%; /* Bordas arredondadas para formar um círculo */
+    border: 1px solid #ccc; /* Borda cinza para destacar o ícone */
+}
 
- 
+  
+  
+  .cartinha-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .cartinha-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 12px;
+  }
+  
+  .close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close-btn:hover,
+  .close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Adicione uma animação para a cartinha aparecer gradualmente */
+.cartinha-modal.fade-in {
+    animation: fadeIn 0.5s ease-in-out; /* Defina a animação fadeIn */
+}
+
+/* Defina a animação fadeIn */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Começa com opacidade 0 */
+    }
+    to {
+        opacity: 1; /* Termina com opacidade 1 */
+    }
+}
+
+/* Fim Estilos para a figurinha da cartinha */
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
