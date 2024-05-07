@@ -3,7 +3,7 @@ body{
     margin: 0; 
     padding: 0; 
     background-color: #4C1B32; 
-    overflow: hidden; /* Impede a rolagem da tela */
+    /*overflow: hidden;  Impede a rolagem da tela */
 }
 
 p {
