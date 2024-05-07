@@ -1,0 +1,172 @@
+body{
+    animation: changeBackgroundColor 3s ease-in-out 3s forwards;
+    margin: 0; 
+    padding: 0; 
+    background-color: #4C1B32; 
+    overflow: hidden; /* Impede a rolagem da tela */
+}
+
+/* coração */
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .container .preloader {
+    animation: rotate 2.3s cubic-bezier(0.75, 0, 0.5, 1) ;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(360deg);
+    }
+  
+    100% {
+      transform: rotate(720deg);
+    }
+  }
+  
+  .preloader span {
+    --c: #E74972;
+    position: absolute;
+    display: block;
+    height: 64px;
+    width: 64px;
+    background: var(--c);
+    border: 1px solid var(--c);
+    border-radius: 100%;
+  }
+  
+  .preloader span:nth-child(1) {
+    transform: translate(-28px, -28px);
+    animation: shape_1 2.3s cubic-bezier(0.75, 0, 0.5, 1);
+  }
+  
+  @keyframes shape_1 {
+    0% {
+      transform: scale(0.4);
+    }
+  }
+  
+  .preloader span:nth-child(2) {
+    transform: translate(28px, -28px);
+    animation: shape_2 2.3s cubic-bezier(0.75, 0, 0.5, 1);
+  }
+  
+  @keyframes shape_2 {
+    0% {
+      transform: scale(0.4);
+    }
+  }
+  
+  .preloader span:nth-child(3) {
+    position: relative;
+    border-radius: 0px;
+    transform: scale(0.98) rotate(-45deg);
+    animation: shape_3 2.3s cubic-bezier(0.75, 0, 0.5, 1);
+  }
+  
+  @keyframes shape_3 {
+    0% {
+      border-radius: 100%;
+      transform: scale(0.5) rotate(-45deg);
+    }
+  
+    100% {
+      transform: scale(0.98) rotate(-45deg);
+    }
+  }
+  
+  .shadow {
+    position: relative;
+    top: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    height: 16px;
+    width: 64px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    border: 1px solid #d9d9d9;
+    animation: shadow 2.3s cubic-bezier(0.75, 0, 0.5, 1);
+  }
+  
+  @keyframes shadow {
+    0% {
+      transform: translateX(-50%) scale(0.5);
+      border-color: #f2f2f2;
+    }
+  }
+  
+  @keyframes changeBackgroundColor {
+    0% {
+      background-color: #4C1B32; /* Cor inicial */
+    }
+    
+    100% {
+      background-color: #E74972; /* Cor final - vermelho */
+    }
+  }
+  
+   /* Fim coração */
+
+ /* Estilos para crescer o coração */
+.container .preloader {
+    animation: rotate 2.3s cubic-bezier(0.75, 0, 0.5, 1), growHeart 4.0s ease-in-out 2.3s forwards;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(380deg);
+    }
+    100% {
+        transform: rotate(720deg);
+    }
+}
+
+@keyframes growHeart {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}
+   /* Fim de Estilos para crescer o coração */
+
+
+/* Estilos para o h1 */
+.mensagem-mae {
+    position: fixed;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    color: white;
+    opacity: 0; /* Inicia com opacidade 0 para a animação */
+    animation: fadeIn 2s ease forwards; /* Adiciona a animação de aparição */
+  }
+  
+  /* Define a animação de aparição */
+  @keyframes fadeIn {
+    from {
+      opacity: 0; /* Começa com opacidade 0 */
+    }
+    to {
+      opacity: 1; /* Termina com opacidade 1 */
+    }
+  }
+  
+  /* Consulta de mídia para tornar o título responsivo */
+@media screen and (max-width: 768px) {
+    .mensagem-mae {
+        font-size: 26px; /* Reduz o tamanho da fonte para telas menores */
+        text-align: center;
+    }
+}
+ /* Fim de Estilos para o h1 */
+
+
+ 
