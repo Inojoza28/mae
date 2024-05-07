@@ -65,6 +65,3 @@ function toggleCartinha() {
         modal.style.display = 'block';
     }
 }
-
-
-
