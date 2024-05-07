@@ -32,13 +32,13 @@ function adicionarMensagem() {
     cartinhaContent.appendChild(closeButton);
 
     var cartaTitle = document.createElement("h2");
-    cartaTitle.textContent = "Querida Mãe,";
+    cartaTitle.textContent = "Mãe,";
     cartinhaContent.appendChild(cartaTitle);
 
     var cartaText = document.createElement("p");
-    cartaText.textContent = "Aqui está uma pequena carta para expressar o quanto você significa para mim...";
+    cartaText.innerHTML = "Quero expressar o quanto você é especial em nossas vidas e a gratidão que sentimos por te termos como mãe. És o melhor que poderíamos ter, uma luz nos momentos de escuridão, a esperança nos dias difíceis, és amor a cada dia. Te amo mais do que tudo neste mundo. Mesmo que expressássemos todas as palavras positivas existentes, ainda assim não seria suficiente para descrever o quanto significas para nós. Mais uma vez, nosso amor ultrapassa os limites do universo! ❤ <br><br>Ass: Biel e Ana";
     cartinhaContent.appendChild(cartaText);
-
+    
     
     // Adiciona uma classe para iniciar a animação de aparição
     setTimeout(function() {
