@@ -44,12 +44,12 @@ function adicionarMensagem() {
     setTimeout(function() {
         cartinhaModal.style.display = "block";
         cartinhaModal.classList.add("fade-in");
-    }, 4000); // Atraso de 5 segundos para aguardar a exibição da frase
+    }, 3000); // Atraso de 3 segundos para aguardar a exibição da frase
 }
 
 // Função para agendar a adição da mensagem e da figurinha após a mudança de cor de fundo
 function agendarMensagem() {
-    // Espera 4 segundos (2 segundos da mudança de cor e mais 2 segundos adicionais)
+    // Espera 5 segundos (2.5 segundos da mudança de cor e mais 2.5 segundos adicionais)
     setTimeout(adicionarMensagem, 5500);
 }
 
